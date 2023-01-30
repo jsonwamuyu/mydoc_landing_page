@@ -3,7 +3,7 @@ import {HiSearchCircle, HiDocument, HiUserGroup} from 'react-icons/hi'
 
 const Card = ({title, desc, icon}:{title:string, desc:string, icon?:string})=>{
   return(
-      <article className='bg-white shadow-md h-[304px] w-[300px] flex flex-col space-y-4 px-[15px] 
+      <article className='bg-white shadow-md h-full w-full sm:h-[304px] sm:w-[300px] flex flex-col space-y-4 px-[15px] 
       rounded-[20px] py-[40px] mb-2 sm:mr-[7rem] space-x-2
          hover:border-[#458FF6] hover:border-2 hover:scale-[1.02] transition-all duration-200'>
         <div className='text-[#458ff6] h-20 w-20 pb-5 object-cover'>{icon}</div>
@@ -23,7 +23,7 @@ const services = () => {
         sure your undergo treatment with our highly qualified doctors you can consult with us
          which type of service is suitable for your health
       </p>
-      <div className='grid grid-cols-1 sm:grid-cols-3 gap-12 items-center justify-start'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 items-center justify-start'>
         <Card icon={<HiSearchCircle className=' h-[6rem] w-[6rem]'/>}
           title="Search Doctor"
           desc="Choose your doctor from thousands of specialist, general, and trusted hospitals"
@@ -50,7 +50,7 @@ const services = () => {
           desc="Track and save your medical history and health data "
         />
       </div>
-      <a href="" className='px-8 text-[#458FF6] rounded-[55px] font-bold hover:bg-[#458FF6] hover:text-white hover:scale-[1.02] transition-all 
+      <a href="" className='px-4 py-2 text-[#458FF6] rounded-[55px] font-bold hover:bg-[#458FF6] hover:text-white hover:scale-[1.02] transition-all 
        border-[1.4px] border-[#458FF6] bg-transparent text-bold text-[18px] leading-[40px] text-center duration-200'>Learn More</a>
     </section>
   )
