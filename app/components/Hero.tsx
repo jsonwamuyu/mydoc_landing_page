@@ -10,10 +10,15 @@ const Hero = () => {
           healthcare, accessible on mobile and online 
           for everyone
         </p>
-        <a href="" className='bg-[#458FF6] rounded-[55px] text-white font-bold text-[18px] py-2 px-4 text-center'>
+        <a href="" className='bg-[#458FF6] rounded-[55px] text-white font-bold text-[18px] py-2 px-4 text-center
+        flex items-center justify-center hover:bg-transparent hover: border hover:border-[#458FF6] hover:scale-[1.02]
+        transition-all duration-200 hover:text-[#458FF6]
+        '>
           Consult today</a>
       </div>
-      <img src="/med.jpg" alt="medicine" className='h-[598px] w-[693px] object-contain'/>
+      <div className="sm:w-1/2 flex">
+        <img src="/med.jpg" alt="medicine" className='h-[598px] w-[693px] object-contain'/>
+      </div>
     </main>
   )
 }

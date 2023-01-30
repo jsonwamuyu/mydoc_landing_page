@@ -1,5 +1,17 @@
 import React from 'react'
-import {HiSearchCircle} from 'react-icons/hi'
+import {HiSearchCircle, HiDocument, HiUserGroup} from 'react-icons/hi'
+
+const Card = ({title, desc, icon}:{title:string, desc:string, icon?:string})=>{
+  return(
+      <article className='bg-white shadow-md h-[304px] w-[300px] flex flex-col space-y-4 px-[15px] 
+      rounded-[20px] py-[40px] mb-2 sm:mr-[7rem] space-x-2
+         hover:border-[#458FF6] hover:border-2 hover:scale-[1.02] transition-all duration-200'>
+        <div className='text-[#458ff6] h-20 w-20 pb-5 object-cover'>{icon}</div>
+        <h5 className='font-bold text-[24px] leading-[56px]'>{title}</h5>
+        <p className='text-[16px] leading-[28px] font-[300]'>{desc}</p>
+      </article>
+  );
+}
 
 const services = () => {
   return (
@@ -11,26 +23,35 @@ const services = () => {
         sure your undergo treatment with our highly qualified doctors you can consult with us
          which type of service is suitable for your health
       </p>
-      <div className='flex flex-col space-y-4 items-center sm:flex-row sm:space-y-0 justify-start sm:space-x-4'>
-        <article className='bg-white shadow-sm h-[354px] w-[350px] flex flex-col space-y-4 px-[39px] rounded-[20px] py-[60px] 
-         hover:border-[#458FF6] hover:border-2'>
-          <HiSearchCircle className='text-[#458ff6] h-20 w-20 pb-5'/>
-          <h5 className='font-bold text-[24px] leading-[56px]'>Search doctor</h5>
-          <p className='text-[16px] leading-[28px] font-[300]'>Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
-         </article>
-         <article className='bg-white shadow-sm h-[354px] w-[350px] flex flex-col space-y-4 p-5
-         hover:border-[#458FF6]'>
-          <HiSearchCircle className='text-[#458ff6] h-20 w-20 pb-5'/>
-          <h5 className='font-bold text-[24px] leading-[56px]'>Online pharmacy</h5>
-          <p className='text-[16px] leading-[28px] font-[300]'>Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
-         </article>
-         <article className='bg-white shadow-sm h-[354px] w-[350px] flex flex-col space-y-4 p-5
-         hover:border-[#458FF6]'>
-          <HiSearchCircle className='text-[#458ff6] h-20 w-20 pb-5'/>
-          <h5 className='font-bold text-[24px] leading-[56px]'>Consultation</h5>
-          <p className='text-[16px] leading-[28px] font-[300]'>Choose your doctor from thousands of specialist, general, and trusted hospitals</p>
-         </article>
+      <div className='grid grid-cols-1 sm:grid-cols-3 gap-12 items-center justify-start'>
+        <Card icon={<HiSearchCircle className=' h-[6rem] w-[6rem]'/>}
+          title="Search Doctor"
+          desc="Choose your doctor from thousands of specialist, general, and trusted hospitals"
+        />
+        <Card icon={<HiDocument className='h-[6rem] w-[6rem]'/>}
+          title="Online pharmacy"
+          desc="Buy  your medicines with our mobile application with a simple delivery system"
+        />
+        <Card icon={<HiSearchCircle/>}
+          title="Details info"
+          desc="Free consultation with our trusted doctors and get the best recomendations"
+        />
+        <Card icon={<HiUserGroup className='h-[6rem] w-[rem]'/>}
+          title="Cunsultation"
+          desc="Free consultation with our trusted doctors and get the best recomendations"
+        />
+        <Card icon={<HiSearchCircle/>}
+          title="Emergency Care"
+          desc="You can get 24/7 urgent care for yourself or your children and your
+            lovely family"
+        />
+        <Card icon={<HiSearchCircle/>}
+          title="Tracking"
+          desc="Track and save your medical history and health data "
+        />
       </div>
+      <a href="" className='px-8 text-[#458FF6] rounded-[55px] font-bold hover:bg-[#458FF6] hover:text-white hover:scale-[1.02] transition-all 
+       border-[1.4px] border-[#458FF6] bg-transparent text-bold text-[18px] leading-[40px] text-center duration-200'>Learn More</a>
     </section>
   )
 }
