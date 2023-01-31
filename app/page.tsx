@@ -6,7 +6,8 @@ import Services from './components/Services'
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Provider from './components/Provider';
-import Download from './components/Download'
+import Download from './components/Download';
+import Latest from './components/Latest';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function Home() {
     <Services />
     <Provider />
     <Download />
+    <Latest />
     <Footer />
     </>
   )

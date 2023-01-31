@@ -15,8 +15,8 @@ const Card = ({title, desc, icon}:{title:string, desc:string, icon?:string})=>{
 
 const services = () => {
   return (
-    <section className='w-full px-[1rem] sm:px-[90px] lg:px-[240px] flex flex-col
-     md:px-[180px] items-center justify-start space-y-6 py-[120px]'>
+    <section className='w-full px-[1rem] sm:px-[90px] flex flex-col
+      items-center justify-start space-y-6 py-[60px]'>
       <h3 className='font-bold text-[36px] leading-[56px] text-center'>Our Services</h3>
       <div className='h-[2px] w-[56px] bg-black rounded-[5px]'/>
       <p className='text-center sm:max-w-[952px]'>We provide to you the best choiches for you. Adjust it to your health needs and make 
@@ -50,7 +50,7 @@ const services = () => {
           desc="Track and save your medical history and health data "
         />
       </div>
-      <a href="" className='px-4 py-2 text-[#458FF6] rounded-[55px] font-bold hover:bg-[#458FF6] hover:text-white hover:scale-[1.02] transition-all 
+      <a href="" className='px-6 py-2 text-[#458FF6] rounded-[55px] font-bold hover:bg-[#458FF6] hover:text-white hover:scale-[1.02] transition-all 
        border-[1.4px] border-[#458FF6] bg-transparent text-bold text-[18px] leading-[40px] text-center duration-200'>Learn More</a>
     </section>
   )
